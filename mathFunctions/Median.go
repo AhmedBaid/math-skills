@@ -24,6 +24,5 @@ func QuickSort(numbers []float64) []float64 {
 			right = append(right, numbers[i])
 		}
 	}
-
 	return append(append(QuickSort(left), last), QuickSort(right)...)
 }

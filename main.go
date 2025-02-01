@@ -31,8 +31,8 @@ func main() {
 		}
 		numbers = append(numbers, float64(num))
 	}
-	fmt.Println("Average:", fmt.Sprintf("%.0f", math.Round(mathFunctions.Average(numbers))))
-	fmt.Println("Median:", fmt.Sprintf("%.0f", math.Round(mathFunctions.Median(numbers))))
-	fmt.Println("Variance:", fmt.Sprintf("%.0f", math.Round(mathFunctions.Variance(numbers))))
-	fmt.Println("Standard Deviation:", fmt.Sprintf("%.0f", math.Round(mathFunctions.StandardDeviation(numbers))))
+	fmt.Println("Average:", int(math.Round(mathFunctions.Average(numbers))))
+	fmt.Println("Median:", int(math.Round(mathFunctions.Median(numbers))))
+	fmt.Println("Variance:", int(math.Round(mathFunctions.Variance(numbers))))
+	fmt.Println("Standard Deviation:", int(math.Round(mathFunctions.StandardDeviation(numbers))))
 }
