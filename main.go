@@ -20,6 +20,7 @@ func main() {
 	File, err := os.Open(Filepath)
 	if err != nil {
 		fmt.Println("Error while opening file", err)
+		return
 	}
 	defer File.Close()
 	scanner := bufio.NewScanner(File)
@@ -28,6 +29,7 @@ func main() {
 		num, err := strconv.Atoi(scanner.Text())
 		if err != nil {
 			fmt.Println("Invalid number", err)
+			return
 		}
 		numbers = append(numbers, float64(num))
 	}
