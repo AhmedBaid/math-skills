@@ -6,6 +6,7 @@ import (
 	"math"
 	"os"
 	"strconv"
+	"strings"
 
 	mathFunctions "mathSkills/mathFunctions"
 )
@@ -17,6 +18,10 @@ func main() {
 		return
 	}
 	Filepath := arguments[1]
+	if !strings.HasSuffix(Filepath, "txt") {
+		fmt.Println("the file path should be a txt file")
+		return
+	}
 	File, err := os.Open(Filepath)
 	if err != nil {
 		fmt.Println("Error while opening file", err)
